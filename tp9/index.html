@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="style.css">
+    <script src="training.js"></script>
+</head>
+<body>
+    <h1>Calculatrice</h1>
+    <label>Nombre 1</label>
+    <input type="text"name="t1" id="t1" placeholder="saisir un nombre ">
+
+    <label>Nombre 2 </label>
+    <input type="text" name="t2" id="t2" placeholder="saisir un nombre ">
+
+<div class="button">
+<button onclick="addition()">+</button>
+<button onclick="soustraction()">-</button>
+<button onclick="multiplication()">*</button>
+<button onclick="division()">/</button>
+<button onclick="pairImpair()">Pair/Impair</button>
+<button onclick="reset()">Reset</button>
+<button onclick="permute()">permute</button>
+</div>
+
+<label>Résultat</label>
+<input type="text" id="resultat" placeholder="résultat" readonly>
+
+<label for="parite">Pair/Impair</label>
+<input type="text" id="parite" placeholder="parité" readonly>
+
+<script>
+function addition() {
+let a = parseFloat(document.getElementById('t1').value);
+let b = parseFloat(document.getElementById('t2').value);
+if (isNaN(a) || isNaN(b)) {
+alert("Veuillez entrer deux nombres !");
+return;
+}
+document.getElementById('resultat').value = a + b;
+}
+
+function soustraction() {
+let a = parseFloat(document.getElementById('t1').value);
+let b = parseFloat(document.getElementById('t2').value);
+if (isNaN(a) || isNaN(b)) {
+alert("Veuillez entrer deux nombres !");
+return;
+}
+document.getElementById('resultat').value = a - b;
+}
+
+function multiplication() {
+let a = parseFloat(document.getElementById('t1').value);
+let b = parseFloat(document.getElementById('t2').value);
+if (isNaN(a) || isNaN(b)) {
+alert("Veuillez entrer deux nombres !");
+return;
+}
+document.getElementById('resultat').value = a * b;
+}
+
+function division() {
+let a = parseFloat(document.getElementById('t1').value);
+let b = parseFloat(document.getElementById('t2').value);
+if (isNaN(a) || isNaN(b)) {
+alert("Veuillez entrer deux nombres !");
+return;
+}
+if (b === 0) {
+alert("Division par zéro impossible !");
+return;
+}
+document.getElementById('resultat').value = a / b;
+}
+
+function pairImpair() {
+let res = parseFloat(document.getElementById('resultat').value);
+if (isNaN(res)) {
+alert("Veuillez d'abord effectuer un calcul !");
+return;
+}
+if (res % 2 === 0) {
+document.getElementById('parite').value = "Pair";
+} else {
+document.getElementById('parite').value = "Impair";
+}
+}
+
+function reset() {
+document.getElementById('t1').value = "";
+document.getElementById('t2').value = "";
+document.getElementById('resultat').value = "";
+document.getElementById('parite').value = "";
+}
+</script>
+</body>
+</html>

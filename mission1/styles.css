@@ -1,0 +1,68 @@
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #78ad8e;
+}
+
+header {
+    background-color: #2f4046;
+    color: rgb(33, 40, 128);
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(223, 170, 170);
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px auto;
+    width: 80%;
+    background-color: rgb(209, 139, 142);
+    border-radius: 40px;
+    box-shadow: 30px 5px 5px rgba(137, 155, 73, 0.5);
+}
+
+section img {
+    display: block;
+    margin: 10px 0;
+    max-width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #dabad4;
+    color: rgb(17, 29, 197);
+}
+button {
+    width: 10em;
+  height: 5ex;
+  background-color: rgb(133, 124, 74);
+  border: 2px solid rgb(68, 14, 73);
+  border-radius: 10px;
+  font-weight: bold;
+  color: rgb(76, 107, 133);
+  cursor: pointer;
+}
+button:hover {
+    background-color: rgb(228, 139, 30);
+}
+div {
+  display: flex;
+justify-content: center;
+}

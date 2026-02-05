@@ -1,0 +1,23 @@
+body{
+    background-color: olive
+}
+
+button{
+    height: 200px;
+    width: 250px;
+    border-radius: 25px;
+    background-color: rgb(212, 72, 72);
+    color: rgb(159, 114, 114);
+    margin: 30px;
+    border: 2px;
+    transition: 0.2s;
+    font-size: 2em;
+
+}
+
+button:hover {
+    background-color: rgb(78, 14, 14);
+    color: rgb(30, 55, 72);
+    border: 2px solid rgb(74, 9, 58);
+    transition: 150ms;
+}
